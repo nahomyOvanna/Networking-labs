@@ -15,14 +15,14 @@ This lab reinforces:
 
 ## 🛠️ Lab Topology
 
-Lab01-Static-Two-VyOS/Lab Topology.png
+![Lab Topology](./lab-topology.png)
 
 Devices:
 - R1 and R2: VyOS routers (qcow2 image in GNS3)
 - PC1 and PC2: Virtual end-hosts in GNS3
 - All devices run on a single canvas in GNS3 using VMware backend
 
-📸 _Insert screenshot here_
+![Lab Topology View 2](./lab-topology-2.png)
 
 ---
 
@@ -34,7 +34,7 @@ Devices:
 set interfaces ethernet eth0 address 192.168.10.1/24
 set interfaces ethernet eth1 address 10.0.0.1/30
 ```
-📸 _Insert screenshot here_
+![R1 interface config](./r1-interface-config.png)
 
 ### ▶️ R2 Configuration
 
@@ -42,22 +42,22 @@ set interfaces ethernet eth1 address 10.0.0.1/30
 set interfaces ethernet eth0 address 10.0.0.2/30
 set interfaces ethernet eth1 address 192.168.20.1/24
 ```
-📸 _Insert screenshot here_
+![R2 Interface Config](./r2-interface-config.png)
 
 
 ### 👨‍💻 PC Host Configuration
 
 #### 💻 PC1
 
--IP: 192.168.10.2
--Subnet: 255.255.255.0
--Gateway: 192.168.10.1
+- IP: 192.168.10.2
+- Subnet: 255.255.255.0
+- Gateway: 192.168.10.1
 
 #### 💻 PC2
 
--IP: 192.168.20.2  
--Subnet: 255.255.255.0  
--Gateway: 192.168.20.1
+- IP: 192.168.20.2  
+- Subnet: 255.255.255.0  
+- Gateway: 192.168.20.1
 
 ### 📡 Static Routing Configuration
 
@@ -66,14 +66,14 @@ set interfaces ethernet eth1 address 192.168.20.1/24
 ```
 set protocols static route 192.168.20.0/24 next-hop 10.0.0.2
 ```
-📸 _Insert screenshot here_
+![R1 Static Route Config](./r1-static-route.png)
 
 #### ▶️ R2
 
 ```
 set protocols static route 192.168.10.0/24 next-hop 10.0.0.1
 ```
-📸 _Insert screenshot here_
+![R2 Static Route Config](./r2-static-route.png)
 
 ---
 
@@ -90,7 +90,7 @@ delete protocols static route 192.168.20.0/24
 commit
 set protocols static route 192.168.20.0/24 next-hop 10.0.0.2
 ```
-📸 _Insert screenshot here_
+![R1 Static Route Fix](./r1-static-route-fix.png)
 
 ---
 
@@ -98,16 +98,16 @@ set protocols static route 192.168.20.0/24 next-hop 10.0.0.2
 
 ### ping 10.0.0.2 from R1: ✅ Success
 
-📸 _Insert screenshot here_
+![Ping from R1 to R2](./ping-r1-to-r2.png)
 
 ### Routing Table Output (R1):
 
-📸 _Insert screenshot here_
 S>* 192.168.20.0/24 [1/0] via 10.0.0.2, eth1
+![R1 Routing Table](./r1-routing-table.png)
 
 ### ping 192.168.20.2 from PC1: ✅ Success
 
-📸 _Insert screenshot here_
+![Ping from PC1 to PC2](./ping-pc1-to-pc2.png)
 
 ---
 
