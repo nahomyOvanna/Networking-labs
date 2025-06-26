@@ -1,0 +1,3 @@
+# Lab 01: Static Routing Between Two VyOS Routers
+
+Placeholder for lab structure. README in progress...
