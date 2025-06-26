@@ -15,7 +15,7 @@ This lab reinforces:
 
 ## 🛠️ Lab Topology
 
-📸 _Insert screenshot here_
+Lab01-Static-Two-VyOS/Lab Topology.png
 
 Devices:
 - R1 and R2: VyOS routers (qcow2 image in GNS3)
