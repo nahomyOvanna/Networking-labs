@@ -49,15 +49,15 @@ set interfaces ethernet eth1 address 192.168.20.1/24
 
 #### 💻 PC1
 
-IP: 192.168.10.2
-Subnet: 255.255.255.0
-Gateway: 192.168.10.1
+-IP: 192.168.10.2
+-Subnet: 255.255.255.0
+-Gateway: 192.168.10.1
 
 #### 💻 PC2
 
-IP: 192.168.20.2  
-Subnet: 255.255.255.0  
-Gateway: 192.168.20.1
+-IP: 192.168.20.2  
+-Subnet: 255.255.255.0  
+-Gateway: 192.168.20.1
 
 ### 📡 Static Routing Configuration
 
