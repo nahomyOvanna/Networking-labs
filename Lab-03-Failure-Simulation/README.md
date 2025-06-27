@@ -106,11 +106,11 @@ I chose to simulate a failure between R1 and R3 by disabling R1’s eth2.
 
 ### Lessons Learned:
 
-- Static Routing Limitation: The lab demonstrated that static routes remain unchanged even when a link fails, resulting in a loss of connectivity. Without a dynamic protocol, the network can’t automatically reroute traffic when a path goes down.
+- **Static Routing Limitation:** The lab demonstrated that static routes remain unchanged even when a link fails, resulting in a loss of connectivity. Without a dynamic protocol, the network can’t automatically reroute traffic when a path goes down.
 
-- Interface States and Connectivity: Even if an interface shows as up/up, it doesn’t always mean end-to-end connectivity is intact. This highlights the need for more sophisticated monitoring and routing techniques.
+- **Interface States and Connectivity:** Even if an interface shows as up/up, it doesn’t always mean end-to-end connectivity is intact. This highlights the need for more sophisticated monitoring and routing techniques.
 
-- Importance of Redundancy: In a real-world network, redundancy is crucial. The lack of an alternate path means a single failure can disrupt connectivity. Dynamic routing protocols (like OSPF) can help by automatically finding new paths.
+- **Importance of Redundancy:** In a real-world network, redundancy is crucial. The lack of an alternate path means a single failure can disrupt connectivity. Dynamic routing protocols (like OSPF) can help by automatically finding new paths.
 
 
 #### 💻 R2
