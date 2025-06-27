@@ -12,7 +12,7 @@ This lab demonstrates:
 
 ## 🛠️ Lab Topology
 
-📸 _Insert screenshot of full topology here_
+![Lab Topology - Static Routing with Multi-hop](Lab-02-Staticrouting-Multi-hop-VyOS/Lab-topology-01.png)
 
 - All router-to-router links use `/30` subnets for efficient IP usage
 - Interfaces mapped as follows:  
