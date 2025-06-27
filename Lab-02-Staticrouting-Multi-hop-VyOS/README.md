@@ -12,7 +12,7 @@ This lab demonstrates:
 
 ## 🛠️ Lab Topology
 
-![Lab Topology - Static Routing with Multi-hop](Lab-02-Staticrouting-Multi-hop-VyOS/Lab-topology-01.png)
+![Lab Topology](Lab-02-Staticrouting-Multi-hop-VyOS/Lab-topology-01.png)
 
 - All router-to-router links use `/30` subnets for efficient IP usage
 - Interfaces mapped as follows:  
@@ -32,9 +32,12 @@ This lab demonstrates:
   - R3 eth2 ↔ R2 eth2
 
 📸 _Insert screenshot of visual GNS3 topology_  
+
+💬 This screenshot shows the initial GNS3 setup, including R1, R3, and R2, with the correct interface connections: R1 eth2 → R3 eth1 and R3 eth2 → R2 eth2. The interface labels are visible to clearly identify which interfaces are linked.
+
 📸 _Insert screenshot showing router interface assignments_
 
-💬 Interfaces clearly labeled in GNS3 for accurate mapping and reduced config errors.
+💬 Here we see each VyOS router configured with 4 network adapters, allowing flexibility for adding links and interfaces in future labs.
 
 ---
 
@@ -44,7 +47,9 @@ This lab demonstrates:
 
 📸 _Insert screenshot of R1 interface config + `show interfaces`_
 
-💬 R1 has `eth2` configured with `10.0.13.1/30`, link state is up/up.
+💬 R1 has `eth2` configured with `10.0.13.1/30`, link state is up/up, indicating the interface is active and connected.
+
+--
 
 #### 💻 R3
 
@@ -53,13 +58,16 @@ This lab demonstrates:
 💬 R3:
 - `eth1` → `10.0.13.2/30`
 - `eth2` → `10.0.23.1/30`
-Both interfaces are up and connected to their neighbors.
+
+💬 R3 shows eth1 with 10.0.13.2/30 and eth2 with 10.0.23.1/30, both interfaces up and linked to neighbors.
+
+--
 
 #### 💻 R2
 
 📸 _Insert screenshot of R2 interface config + `show interfaces`_
 
-💬 R2 has `eth2` configured with `10.0.23.2/30`, link state is up/up.
+💬 R2 has `eth2` configured with `10.0.23.2/30`, link state is up/up, successfully linked to R3.
 
 ---
 
@@ -69,13 +77,15 @@ Both interfaces are up and connected to their neighbors.
 
 📸 _Insert screenshot of R1 ping to R3_
 
-💬 Ping from R1 (`10.0.13.1`) to R3 (`10.0.13.2`) confirms first link is operational.
+💬 Ping from R1 (`10.0.13.1`) to R3 (`10.0.13.2`) confirms direct connectivity on the first point-to-point link.
 
 #### 💻 R3 → R1 & R2
 
 📸 _Insert screenshot of R3 pings to R1 and R2_
 
-💬 R3 successfully pings both R1 and R2, confirming bidirectional reachability.
+💬 Ping from R3 confirms bidirectional reachability to R1 on the `10.0.13.0/30` link and successful reachability to R2’s `10.0.23.2/30` address, verifying both point-to-point links are operational.
+
+--
 
 #### 💻 R2 → R3
 
