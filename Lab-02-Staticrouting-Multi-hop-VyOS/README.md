@@ -12,7 +12,7 @@ This lab demonstrates:
 
 ## 🛠️ Lab Topology
 
-![Lab Topology](Lab-02-Staticrouting-Multi-hop-VyOS/Lab-topology-01.png)
+![Lab Topology](lab-topology-01.png)
 
 - All router-to-router links use `/30` subnets for efficient IP usage
 - Interfaces mapped as follows:  
@@ -31,11 +31,11 @@ This lab demonstrates:
   - R1 eth2 ↔ R3 eth1
   - R3 eth2 ↔ R2 eth2
 
-📸 _Insert screenshot of visual GNS3 topology_  
+![Lab Topology](lab-topology02.png)
 
 💬 This screenshot shows the initial GNS3 setup, including R1, R3, and R2, with the correct interface connections: R1 eth2 → R3 eth1 and R3 eth2 → R2 eth2. The interface labels are visible to clearly identify which interfaces are linked.
 
-📸 _Insert screenshot showing router interface assignments_
+![Config Snapshot](lab-topology-config03.png)
 
 💬 Here we see each VyOS router configured with 4 network adapters, allowing flexibility for adding links and interfaces in future labs.
 
@@ -45,7 +45,7 @@ This lab demonstrates:
 
 #### 💻 R1
 
-📸 _Insert screenshot of R1 interface config + `show interfaces`_
+![R1 IP Configuration](r1-ipconfig-04.png)
 
 💬 R1 has `eth2` configured with `10.0.13.1/30`, link state is up/up, indicating the interface is active and connected.
 
@@ -53,9 +53,8 @@ This lab demonstrates:
 
 #### 💻 R3
 
-📸 _Insert screenshot of R3 `show interfaces` output_
+![R3 Interfaces](r3-interfaces-05.png)
 
-💬 R3:
 - `eth1` → `10.0.13.2/30`
 - `eth2` → `10.0.23.1/30`
 
@@ -65,7 +64,7 @@ This lab demonstrates:
 
 #### 💻 R2
 
-📸 _Insert screenshot of R2 interface config + `show interfaces`_
+![R2 Interface Configuration](r2-interfaceconfig-06.png)
 
 💬 R2 has `eth2` configured with `10.0.23.2/30`, link state is up/up, successfully linked to R3.
 
@@ -75,13 +74,13 @@ This lab demonstrates:
 
 #### 💻 R1 → R3
 
-📸 _Insert screenshot of R1 ping to R3_
+![R1 Ping to R2](r1-ping-07.png)
 
 💬 Ping from R1 (`10.0.13.1`) to R3 (`10.0.13.2`) confirms direct connectivity on the first point-to-point link.
 
 #### 💻 R3 → R1 & R2
 
-📸 _Insert screenshot of R3 pings to R1 and R2_
+![R3 Bidirectional Ping](r3-biderectionalping-08.png)
 
 💬 Ping from R3 confirms bidirectional reachability to R1 on the `10.0.13.0/30` link and successful reachability to R2’s `10.0.23.2/30` address, verifying both point-to-point links are operational.
 
@@ -89,7 +88,7 @@ This lab demonstrates:
 
 #### 💻 R2 → R3
 
-📸 _Insert screenshot of R2 ping to R3_
+![R2 Ping to R1](r2-ping-09.png)
 
 💬 Ping to `10.0.23.1` confirms second point-to-point link is functional.
 
@@ -99,13 +98,13 @@ This lab demonstrates:
 
 #### 💻 R1
 
-📸 _Insert screenshot of R1 static route_
+![R1 Static Route](r1-staticroute-10.png)
 
 💬 R1 configured with a static route to the `10.0.23.0/30` network via R3’s `10.0.13.2`. This allows R1 to reach R2’s subnet through R3.
 
 #### 💻 R2
 
-📸 _Insert screenshot of R2 static route_
+![R2 Static Route](r2-staticroute-11.png)
 
 💬 R2 configured with a static route to the `10.0.13.0/30` network via R3’s `10.0.23.1`, enabling reachability to R1 via R3.
 
@@ -115,13 +114,13 @@ This lab demonstrates:
 
 #### 💻 R1 → R2
 
-📸 Insert screenshot: R1 ping to 10.0.23.2
+![R1 Final Ping to R2](r1-pingsucces-12.png)
 
 💬 R1 successfully pings R2’s `10.0.23.2` address. This confirms that static routing is correctly forwarding packets across R3.
 
 #### 💻 R2 → R1
 
-📸 Insert screenshot: R2 ping to 10.0.13.1
+![R2 Final Ping to R1](r2-pingsuccess-13.png)
 
 💬 R2 successfully pings R1’s 10.0.13.1 address, verifying bidirectional communication through the intermediate router.
 
