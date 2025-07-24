@@ -1,6 +1,6 @@
-# 🌐 Lab 02: Static Routing Across Multi-hop VyOS Routers
+#  Lab 02: Static Routing Across Multi-hop VyOS Routers
 
-## 🧠 Objective  
+##  Objective  
 Configure static routing across three VyOS routers connected in series (R1 → R3 → R2) to enable communication between R1 and R2 through an intermediate router (R3).  
 This lab demonstrates:
 
@@ -10,7 +10,7 @@ This lab demonstrates:
 
 ---
 
-## 🛠️ Lab Topology
+##  Lab Topology
 
 ![Lab Topology](lab-topology-01.png)
 
@@ -21,7 +21,7 @@ This lab demonstrates:
 
 ---
 
-## 🔧 Lab Steps
+##  Lab Steps
 
 ### 1️⃣ GNS3 Project Setup
 
@@ -126,7 +126,7 @@ This lab demonstrates:
 
 ---
 
-### ✅ Summary
+###  Summary
 
 This section of the lab demonstrated:
 
@@ -140,7 +140,7 @@ This section of the lab demonstrated:
 
 ---
 
-### 💡 Concepts Reinforced
+###  Concepts Reinforced
 
   - Point-to-point subnet design: /30 subnetting reduces IP waste and simplifies routing
 
@@ -152,7 +152,7 @@ This section of the lab demonstrated:
 
 ---
 
-### 📝 Notes
+###  Notes
 
   - Double-check GNS3 cabling and adapter mappings — mismatches lead to link-down issues
 
@@ -164,7 +164,7 @@ This section of the lab demonstrated:
 
 ---
 
-### 📌 Lab Status
+###  Lab Status
 
 #### ✅ Completed successfully — All routers achieved full end-to-end connectivity using static routes across R3.
 
