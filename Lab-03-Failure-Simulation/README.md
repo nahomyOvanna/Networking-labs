@@ -1,6 +1,6 @@
-# 🚀 Lab 03: Static Routing Extension — Failure Simulation + Redundancy Concepts
+#  Lab 03: Static Routing Extension — Failure Simulation + Redundancy Concepts
 
-## 📝 Lab Objective
+##  Lab Objective
 
 This lab builds upon the static routing configuration completed in Lab 2. The goal is to simulate a link failure between routers and observe how static routes behave in the absence of dynamic failover. Additionally, this lab introduces basic redundancy concepts by planning alternative paths (even if not yet implemented) and reflecting on static routing limitations.
 
@@ -16,7 +16,7 @@ This lab builds upon the static routing configuration completed in Lab 2. The go
 
 ---
 
-## 🌐 Topology
+##  Topology
 
 #### The topology remains the same as in Lab 2:
 
@@ -26,13 +26,13 @@ This lab builds upon the static routing configuration completed in Lab 2. The go
 
 ---
 
-## 🌱 Lab Context
+##  Lab Context
 
 Lab 3 extends the configuration from Lab 2. The initial point-to-point addressing and static routes will remain in place. This lab focuses on failure handling and preparing for future dynamic routing enhancements.
 
 ---
 
-## ⚡ Step 1: Confirm Baseline Working State
+##  Step 1: Confirm Baseline Working State
 
 #### 💻 R1
 
@@ -58,7 +58,7 @@ Lab 3 extends the configuration from Lab 2. The initial point-to-point addressin
 
 ---
 
-## ⚡ Step 2: Simulate Link Failure
+##  Step 2: Simulate Link Failure
 
 #### We want to simulate a failure on one of the point-to-point links and observe how static routing behaves when the path is broken.
 I chose to simulate a failure between R1 and R3 by disabling R1’s eth2.
@@ -102,7 +102,7 @@ I chose to simulate a failure between R1 and R3 by disabling R1’s eth2.
 
 ---
 
-## ⚡ Step 3: Summarize and Plan for Resilience
+##  Step 3: Summarize and Plan for Resilience
 
 ### Lessons Learned:
 
@@ -133,7 +133,7 @@ I chose to simulate a failure between R1 and R3 by disabling R1’s eth2.
 
 ---
 
-## ✅ Summary
+##  Summary
 
 In this lab, we extended our static routing setup from Lab 2 by simulating a link failure between R1 and R3. We observed how the network behaved without any dynamic failover mechanisms. Specifically, we:
 
@@ -147,7 +147,7 @@ In this lab, we extended our static routing setup from Lab 2 by simulating a lin
 
 ---
 
-## 💡 Concepts Reinforced
+##  Concepts Reinforced
 
   - Static routing limitations: Static routes remain unchanged during failures and do not provide automatic path recalculation or rerouting.
 
@@ -159,7 +159,7 @@ In this lab, we extended our static routing setup from Lab 2 by simulating a lin
 
 ---
 
-## 📝 Notes
+##  Notes
 
 - In this lab, link failure was simulated by administratively shutting down R1’s eth2 interface.
 
@@ -171,13 +171,13 @@ In this lab, we extended our static routing setup from Lab 2 by simulating a lin
 
 ---
 
-## 📌 Lab Status
+##  Lab Status
 
 #### ✅ Completed successfully — The failure scenario was implemented, observed, and documented.
 
 ---
 
-### 🌱 Next step (Lab 4) — We will introduce OSPF as a dynamic routing protocol to provide automatic route recalculation in case of link failures. Lab 4 will build on this topology and demonstrate how dynamic routing protocols can create self-healing networks.
+###  Next step (Lab 4) — We will introduce OSPF as a dynamic routing protocol to provide automatic route recalculation in case of link failures. Lab 4 will build on this topology and demonstrate how dynamic routing protocols can create self-healing networks.
 
 
 
