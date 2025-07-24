@@ -1,10 +1,10 @@
-# 🧪 Lab 04: Implementing Dynamic Routing with OSPF
+#  Lab 04: Implementing Dynamic Routing with OSPF
 
 This lab enhances the static routing setup from Labs 2 and 3 by implementing **OSPF (Open Shortest Path First)**. The goal is to provide automatic route advertisement and dynamic failover in the event of a link failure.
 
 By the end of this lab, **R1** and **R2** will dynamically learn routes through **R3**, and the network will adapt to link changes automatically — no manual reconfiguration needed.
 
-## 📝 Lab Objective
+##  Lab Objective
 
 - Replace static routing with dynamic OSPF routing
 - Establish neighbor relationships and route exchange between R1, R2, and R3
@@ -13,7 +13,7 @@ By the end of this lab, **R1** and **R2** will dynamically learn routes through 
 
 ---
 
-## 🔹 Step 1: Clean Up Static Routing and Confirm Baseline
+##  Step 1: Clean Up Static Routing and Confirm Baseline
 
 On both R1 and R2, the following commands were executed to remove static routing:
 
@@ -40,7 +40,7 @@ After removal, the routing tables were verified on all three routers using: `sho
 
 ---
 
-## 🔹 Step 2: Configure OSPF on R1, R2, and R3
+##  Step 2: Configure OSPF on R1, R2, and R3
 
 ![R1 OSPF Configuration](r1-config-04.png)
 ![R2 OSPF Configuration](r2-config-05.png)
@@ -50,7 +50,7 @@ After removal, the routing tables were verified on all three routers using: `sho
 
 ---
 
-## 🔹 Step 3: Verify OSPF Neighbor Adjacencies and Learned Routes
+##  Step 3: Verify OSPF Neighbor Adjacencies and Learned Routes
 
 ![OSPF Neighbor Adjacencies](adjacencies-07.png)
 
@@ -64,7 +64,7 @@ After removal, the routing tables were verified on all three routers using: `sho
 
 ---
 
-## 🔹 Step 4: Simulate a Link Failure and Observe OSPF Convergence
+##  Step 4: Simulate a Link Failure and Observe OSPF Convergence
 
 ![R3 Link Failure Simulation](r3-link-failure-11.png)
 
@@ -84,7 +84,7 @@ After removal, the routing tables were verified on all three routers using: `sho
 
 ---
 
-## 🔹 Step 5: Restore the Failed Link and Observe OSPF Recovery
+##  Step 5: Restore the Failed Link and Observe OSPF Recovery
 
 ![R3 Link Restoration](r3-restore-15.png)
 
@@ -104,12 +104,12 @@ After removal, the routing tables were verified on all three routers using: `sho
 
 ---
 
-## ✅ Summary
+##  Summary
 
 This lab extended our previous static routing setup by implementing OSPF (Open Shortest Path First) across a 3-router topology. We configured dynamic routing to replace static routes, verified OSPF neighbor adjacencies, and tested network reconvergence after simulating a link failure between R3 and R2. The lab successfully demonstrated how OSPF can automatically adapt to network changes and maintain routing accuracy without manual intervention.
 
 
-## 🧠 Concepts Reinforced
+##  Concepts Reinforced
 
 - OSPF Configuration Basics: Configuring OSPF using /30 point-to-point networks in area 0.
 
@@ -123,7 +123,7 @@ This lab extended our previous static routing setup by implementing OSPF (Open S
 
 ---
 
-## 🟢 Lab Status
+##  Lab Status
 
 ### ✅ Completed Successfully
  R1 and R2 were able to dynamically learn and remove routes via R3 using OSPF. The network correctly responded to simulated failures by recalculating the topology and updating routing tables. All steps have been fully tested, documented with snapshots, and annotated with portfolio-grade comments.
