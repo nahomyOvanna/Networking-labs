@@ -1,6 +1,6 @@
-# 🌐 Lab 01: Static Routing Between Two VyOS Routers
+#  Lab 01: Static Routing Between Two VyOS Routers
 
-## 🧠 Objective  
+##  Objective  
 
 Establish Layer 3 connectivity between two end-host PCs using two VyOS routers in GNS3 by implementing static routing.  
 This lab reinforces:
@@ -13,7 +13,7 @@ This lab reinforces:
 
 ---
 
-## 🛠️ Lab Topology
+##  Lab Topology
 
 ![Lab Topology](./lab-topology.png)
 
@@ -26,7 +26,7 @@ Devices:
 
 ---
 
-## ⚙️ Configuration Summary
+##  Configuration Summary
 
 ### ▶️ R1 Configuration
 
@@ -45,7 +45,7 @@ set interfaces ethernet eth1 address 192.168.20.1/24
 ![R2 Interface Config](./r2-interface-config.png)
 
 
-### 👨‍💻 PC Host Configuration
+###  PC Host Configuration
 
 #### 💻 PC1
 
@@ -59,7 +59,8 @@ set interfaces ethernet eth1 address 192.168.20.1/24
 - Subnet: 255.255.255.0  
 - Gateway: 192.168.20.1
 
-### 📡 Static Routing Configuration
+
+##  Static Routing Configuration
 
 #### ▶️ R1
 
@@ -77,7 +78,7 @@ set protocols static route 192.168.10.0/24 next-hop 10.0.0.1
 
 ---
 
-## 🔍 Troubleshooting Highlights:
+##  Troubleshooting Highlights:
 
 - Initial route not showing in R1’s routing table
 - Verified R1–R2 link with ping 10.0.0.2
@@ -94,7 +95,7 @@ set protocols static route 192.168.20.0/24 next-hop 10.0.0.2
 
 ---
 
-## ✅ Verification Results
+##  Verification Results
 
 ### ping 10.0.0.2 from R1: ✅ Success
 
@@ -111,7 +112,7 @@ S>* 192.168.20.0/24 [1/0] via 10.0.0.2, eth1
 
 ---
 
-## 🧠 Concepts Reinforced
+##  Concepts Reinforced
 
 - Subnetting with /24 and /30 masks
 - Static routing behavior in VyOS
