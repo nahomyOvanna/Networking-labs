@@ -1,4 +1,4 @@
-# 🧩Lab 05: Scaling with Multi-Area OSPF + Loopback Advertisement
+# Lab 05: Scaling with Multi-Area OSPF + Loopback Advertisement
 
 This lab builds upon the dynamic routing setup from Lab 04 by introducing a multi-area OSPF topology and loopback interface advertisement to simulate a more scalable and hierarchical enterprise network design.
 
@@ -14,7 +14,7 @@ This setup mirrors real-world enterprise deployments where routing domains are s
 
 ---
 
-## 🧠 Learning Objectives
+##  Learning Objectives
 
 - Design a multi-area OSPF network using Areas 0 and 1
 
@@ -30,18 +30,18 @@ This setup mirrors real-world enterprise deployments where routing domains are s
 
 ---
 
-## 🏗️ Topology
+##  Topology
 
 ![Lab Topology](topology-01.png) 
 
 
 ---
 
-### 🧹 Before beginning this lab, all previous OSPF configurations from earlier labs were removed on R1, R2, and R3 to ensure a clean starting point for the multi-area OSPF setup.
+###  Before beginning this lab, all previous OSPF configurations from earlier labs were removed on R1, R2, and R3 to ensure a clean starting point for the multi-area OSPF setup.
 
 ---
 
-## 🔹 Step 1: Add Loopback Interfaces to All Routers
+##  Step 1: Add Loopback Interfaces to All Routers
 
 ### 💻 R1
 
@@ -65,7 +65,7 @@ This setup mirrors real-world enterprise deployments where routing domains are s
 
 ---
 
-## 🔹 Step 2: Configure Multi-Area OSPF and Advertise Loopbacks
+##  Step 2: Configure Multi-Area OSPF and Advertise Loopbacks
 
 ### 💻 R1
 
@@ -89,9 +89,9 @@ This setup mirrors real-world enterprise deployments where routing domains are s
 
 ---
 
-## 🔹 Step 3: Verify OSPF Adjacencies and Loopback Reachability
+##  Step 3: Verify OSPF Adjacencies and Loopback Reachability
 
-### 🧪 Part 1: Verify OSPF Neighbors
+###  Part 1: Verify OSPF Neighbors
 
 
 ### 💻 R1
@@ -116,7 +116,7 @@ This setup mirrors real-world enterprise deployments where routing domains are s
 
 --
 
-### 🧪 Part 2: Verify Routing Tables and Loopback Reachability
+###  Part 2: Verify Routing Tables and Loopback Reachability
 
 
 ### 💻 R1
@@ -141,7 +141,7 @@ This setup mirrors real-world enterprise deployments where routing domains are s
 
 --
 
-### 🧪 Part 3: Ping Loopback Addresses
+###  Part 3: Ping Loopback Addresses
 
 
 ### 💻 R1
@@ -159,7 +159,7 @@ This setup mirrors real-world enterprise deployments where routing domains are s
 
 ----
 
-## ✅ Summary
+##  Summary
 
 In this lab, we extended dynamic routing by implementing multi-area OSPF across a 3-router topology. R3 was configured as an Area Border Router (ABR), connecting Area 0 and Area 1. Each router advertised its loopback interface, simulating internal host reachability across different OSPF areas. We verified neighbor adjacencies, confirmed OSPF-learned loopbacks, and successfully demonstrated full connectivity between all routers.
 
@@ -167,7 +167,7 @@ This lab emphasizes real-world design principles like hierarchical routing, loop
 
 ----
 
-## 🧠 Concepts Reinforced
+##  Concepts Reinforced
 
  - Multi-Area OSPF Design: Separation of areas to enhance scalability and reduce SPF overhead.
 
@@ -183,7 +183,7 @@ This lab emphasizes real-world design principles like hierarchical routing, loop
 
 ---
 
-## 🟢 Lab Status
+##  Lab Status
 
 ### ✅ Completed Successfully
 
